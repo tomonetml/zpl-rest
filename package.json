@@ -26,6 +26,7 @@
     "mustache": "^3.1.0",
     "request": "^2.88.0",
     "serve-favicon": "^2.5.0",
-    "websocket": "^1.0.30"
+    "websocket": "^1.0.30",
+    "chalk": "^4.1.2"
   }
 }

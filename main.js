@@ -441,11 +441,11 @@ rest.delete('/rest/label/(:id)', function(req, res) {
 
 // starting rest
 if (config.public) {
-  rest.listen(config.port, function() {
+  rest.listen(config.port, '127.0.0.1', function() {
     console.log((new Date()) + " REST is listening on port %d in %s mode", config.port, "public");
   });
 } else {
-  rest.listen(config.port, 'localhost', function() {
+  rest.listen(config.port, '127.0.0.1', function() {
     console.log((new Date()) + " REST is listening on port %d in %s mode", config.port, "localhost");
   });
 }
@@ -455,7 +455,7 @@ var server = http.createServer(function(request, response) {
   // process HTTP request. Since we're writing just WebSockets
   // server we don't have to implement anything.
 });
-server.listen(config.websocket_port, function() {
+server.listen(config.websocket_port, '0.0.0.0', function() {
   console.log((new Date()) + " Websocket is listening on port " +
     config.websocket_port);
 });
