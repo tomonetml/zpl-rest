@@ -325,7 +325,7 @@ rest.post('/rest/print', function(req, res) {
 function executeRequest(job, callback) {
   var client = new Net.Socket();
 
-  client.setTimeout(5000, function() {
+  client.setTimeout(10000, function() {
     console.error((new Date()) + " " + "connection timed out");
     job.failed = true;
     job.error = "connection timed out";

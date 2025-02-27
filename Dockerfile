@@ -1,5 +1,5 @@
-# Usa Alpine 3.19.1 come immagine base
-FROM alpine:3.19.1
+# Usa Alpine 3.19.7 come immagine base
+FROM alpine:3.19.7
 # Setta le variabili d'ambiente
 ENV NODE_ENV=production
 # Aggiorna il sistema e installa le dipendenze necessarie
@@ -22,4 +22,4 @@ COPY .htpasswd /etc/nginx/.htpasswd
 # Esponi la porta 80 per Nginx
 EXPOSE 80
 # Avvia Nginx, l'app Node.js e la shell ash
-CMD nginx -g 'daemon off;' & node main.js && /bin/ash
+CMD nginx -g 'daemon off;' & node main.js --max-old-space-size=1024 && /bin/ash

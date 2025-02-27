@@ -18,6 +18,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
     "cors": "^2.8.5",
     "diskdb": "^0.1.17",
     "ejs": "^3.1.7",
@@ -27,6 +28,6 @@
     "request": "^2.88.0",
     "serve-favicon": "^2.5.0",
     "websocket": "^1.0.30",
-    "chalk": "^4.1.2"
+    "zpl-rest": "file:"
   }
 }
